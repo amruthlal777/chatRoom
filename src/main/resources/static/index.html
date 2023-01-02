@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Chat Room</title>
+<link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css"></link>
+<link rel="stylesheet" href="/style.css"></link>
+
+<script src="/webjars/jquery/jquery.min.js"></script>
+<script src="/webjars/sockjs-client/sockjs.min.js"></script>
+<script src="/webjars/stomp-websocket/stomp.min.js"></script>
+<script src="/script.js"></script>
+</head>
+<body class="bg-dark">
+
+ <div id="name-form" class="bg-primary d-flex align-items-center">
+ 	<div class="container-fluid">
+ 		<div class="row">
+ 			<div class="col-md-4 offset-md-4">
+ 				<div class="login input-group">
+ 					<input type="text"
+ 					 placeholder="Enter your Name"
+ 					 id="name-value" autofocus class="form-control">
+ 			         
+ 			         <div class="input-group-append">
+ 			         
+ 			         	<button class="btn btn-dark" id="login">Enter</button>
+ 			         </div>
+ 				</div>
+ 			</div>
+ 		</div>
+ 	</div>
+ </div>
+ <div id="chat-room" class="d-none">
+    <div class="container-fluid">
+    	<div class="row">
+    		<div class="justify-content-md-center">
+    			<div class="card mt-3">
+    				<div class="card-body">
+    				
+    				<div class="my-form input-group">
+    				
+ 						<input id="message-value" type="text"
+ 					 	placeholder="Enter your Message"
+ 					 	 autofocus class="form-control" >
+ 			         
+ 			         	<div class="input-group-append ml-3">
+ 			         
+ 			         		<button class="btn btn-dark ml10" id="send-btn">Send</button>
+ 			         		<button class="btn btn-dark" id="logout">LogOut</button>
+ 			         	</div>  
+ 					</div>
+ 				
+    					<div class="table-responsive">
+    						<table id="message-container-table">
+    							
+    						</table>
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    </div>
+ </div>
+
+</body>
+</html>
